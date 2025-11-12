@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer.jsx';
+import Footer from '../components/Footer';
 
 function Events() {
   const events = [
@@ -78,7 +78,7 @@ function Events() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-        <Navbar />
+      <Navbar />
       {/* Animated Background Effects */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -106,7 +106,7 @@ function Events() {
           {events.map((event, index) => (
             <div 
               key={event.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-cyan-400/20 transition-all duration-500 hover:scale-105"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden transition-all duration-400  hover:shadow-2xl hover:shadow-cyan-400/20"
               style={{ animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both` }}
             >
               {/* Image */}
@@ -116,7 +116,7 @@ function Events() {
                   alt={event.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 
                 {/* Category Badge */}
                 <div className="absolute top-4 right-4">
@@ -129,31 +129,31 @@ function Events() {
               {/* Content */}
               <div className="p-6">
                 {/* Title */}
-                <h3 className="text-2xl font-black text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                <h3 className="text-2xl font-black text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {event.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-slate-400 text-sm leading-relaxed mb-4">
                   {event.description}
                 </p>
 
                 {/* Date & Time */}
                 <div className="space-y-2 mb-4">
-                  <div className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 mr-3 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center text-slate-300">
+                    <svg className="w-5 h-5 mr-3 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     <span className="text-sm font-semibold">{event.date}</span>
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center text-slate-300">
+                    <svg className="w-5 h-5 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span className="text-sm font-semibold">{event.time}</span>
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 mr-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center text-slate-300">
+                    <svg className="w-5 h-5 mr-3 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -183,7 +183,7 @@ function Events() {
           }
         }
       `}</style>
-        <Footer />  
+      <Footer/>
     </div>
   );
 }
