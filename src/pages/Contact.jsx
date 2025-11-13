@@ -185,7 +185,7 @@ function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400/50 focus:bg-white/10 transition-all"
-                    placeholder="John Doe"
+                    placeholder="Enter Full Name here"
                   />
                 </div>
 
@@ -198,7 +198,7 @@ function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400/50 focus:bg-white/10 transition-all"
-                    placeholder="john@example.com"
+                    placeholder="name@gmail.com"
                   />
                 </div>
 

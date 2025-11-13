@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer.jsx';
+import { Link } from 'react-router-dom';
 
 function MainContainer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -80,6 +81,7 @@ function MainContainer() {
             </div>
             
             <div className="mb-20 animate-[fadeIn_1s_ease-out_0.5s_both]">
+              <Link to="/signup">
               <button className="group relative px-14 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg font-bold rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/50 hover:scale-105 active:scale-95">
                 <span className="relative z-10 tracking-wide">JOIN THE COMMUNITY</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -87,6 +89,7 @@ function MainContainer() {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></div>
                 </div>
               </button>
+              </Link>
             </div>
 
             <div className="flex flex-wrap justify-center items-center gap-6 mb-24 animate-[fadeIn_1s_ease-out_0.7s_both]">
